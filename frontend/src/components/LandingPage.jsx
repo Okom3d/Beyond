@@ -22,16 +22,16 @@ export const LandingPage = () => {
             onChange={handleCodeChange}
             placeholder="000000"
             className="access-code-input"
-            maxLength={6}
-          />
+            maxLength={6} />
+
         </div>
       </div>
       
       <footer className="landing-footer">
-        <p className="exclusivity-text">You were either invited, or you were not</p>
+        <p className="exclusivity-text !font-sans">You were either invited, or you were not</p>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default LandingPage;
