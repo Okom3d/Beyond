@@ -1,34 +1,148 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+body {
+  font-family: 'Times New Roman', serif;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.App {
+  background-color: #000000;
+  min-height: 100vh;
 }
 
-.App-link {
-    color: #61dafb;
+/* Landing Page Styles */
+.landing-container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 8rem;
+}
+
+.brand-name {
+  font-family: 'Times New Roman', serif;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.location {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin: -1rem 0 0 0;
+  opacity: 0.9;
+}
+
+.access-code-container {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.access-code-input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  color: #FFFFFF;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.8em;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.access-code-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.8em;
+}
+
+.access-code-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.landing-footer {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.exclusivity-text {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.15em;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 3.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .location {
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+  }
+
+  .access-code-input {
+    font-size: 1.25rem;
+    padding: 0.875rem 1rem;
+  }
+
+  .exclusivity-text {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .landing-footer {
+    bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+  }
+
+  .location {
+    font-size: 0.875rem;
+  }
+
+  .access-code-input {
+    font-size: 1rem;
+  }
 }
